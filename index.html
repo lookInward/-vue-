@@ -9,8 +9,11 @@
     <div id="app"></div>
     <script>
       const htmlDomWidth = document.documentElement.clientWidth || document.body.clientWidth
-      console.log(htmlDomWidth)
       const htmlDomEle = document.getElementsByTagName('html')[0]
+
+      if(htmlDomWidth > 750) {
+        htmlDomWidth = 750
+      }
       htmlDomEle.style.fontSize = htmlDomWidth/20 + 'px'
     </script>
   </body>
