@@ -15,6 +15,14 @@
              </van-col>
             </van-row>
         </div>
+
+        <div class="swiper-area">
+            <van-swipe :autoplay="3000">
+                <van-swipe-item v-for="(banner,index) in bannerPicArray" :key="index">
+                    <img v-lazy="banner.imageUrl" width="100%" alt="">
+                </van-swipe-item>
+            </van-swipe>
+        </div>
     </div>
 </template>
 
@@ -24,7 +32,12 @@ export default {
   data() {
     return {
       msg: "value",
-      locationIcon:require('../../assets/images/locate.svg')
+      locationIcon:require('../../assets/images/locate.svg'),
+      bannerPicArray:[
+          {imageUrl:'http://7xjyw1.com1.z0.glb.clouddn.com/simleVueDemoPic001.jpg'},
+          {imageUrl:'http://7xjyw1.com1.z0.glb.clouddn.com/simleVueDemoPic002.jpg'},
+          {imageUrl:'http://7xjyw1.com1.z0.glb.clouddn.com/simleVueDemoPic003.jpg'},
+      ]
     };
   }
 };
@@ -36,6 +49,7 @@ export default {
     padding-left:0.4rem;
     background: #e5017d;
     line-height: 2.2; 
+    overflow: hidden;
 }
 .locate-icon {
     padding:0.2rem;
@@ -51,5 +65,9 @@ export default {
 .btn-find {
     margin-left:0.4rem;
 }
+.swiper-area{
+      width:20rem;
+      clear:both;
+  }
 </style>
 

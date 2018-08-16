@@ -6,8 +6,8 @@ import App from './App'
 import router from './router'
 
 // 按需引入
-import { Button, Row, Col } from 'vant'
-Vue.use(Button).use(Row).use(Col)
+import { Button, Row, Col,Swipe,SwipeItem,Lazyload, } from 'vant'
+Vue.use(Button).use(Row).use(Col).use(Swipe).use(SwipeItem).use(Lazyload)
 // 全局引入
 // import Vant from 'vant'
 // import 'vant/lib/vant-css/index.css'
